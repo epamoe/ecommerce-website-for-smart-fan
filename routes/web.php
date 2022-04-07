@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 
 
-Route::group(['namespace'=>'Backend'],function(){
+Route::group(['namespace'=>'App\Http\Controllers\Backend'],function(){
 
 Route::get('back','HomeController@index')->name('back.home');
 
