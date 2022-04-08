@@ -24,3 +24,13 @@ Route::group(['namespace'=>'App\Http\Controllers\Backend'],function(){
 Route::get('back','HomeController@index')->name('back.home');
 
 });
+
+/*
+    les routes de gestion du profile
+*/
+Route::get('/profile', function () {
+    return view('app-profile');
+});
+
+Route::post('/profile','App\Http\Controllers\Profile\ProfileController@find')->name('findprofile');
+Route::post('/profile-setting','App\Http\Controllers\Profile\ProfileController@edit')->name('editprofile');
