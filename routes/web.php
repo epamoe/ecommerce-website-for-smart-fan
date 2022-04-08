@@ -13,11 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
+Route::group(['namespace'=>'App\Http\Controllers\Frontend'],function(){
+
+    Route::get('/','Vitrine\IndexController@index')->name('vitrine');
+    Route::get('/signin','Auth\LoginController@index')->name('signin');
+    Route::post('/login','Auth\LoginController@authenticate')->name('login');
+
+    
+    });
 
 Route::group(['namespace'=>'Backend'],function(){
 
