@@ -992,7 +992,7 @@ fonctionnant a l’ énergie solaire</a></h3>
 
     <!-- FAQ's section -->
 
-    <section class="faq-section" style="background-image: url({{asset('frontend/images/background/6.jpg')}});">
+    <section class="faq-section" style="background-image: url({{asset('frontend/images/background/3.jpg')}});">
 
         <div class="anim-icons full-width">
 
@@ -1010,7 +1010,7 @@ fonctionnant a l’ énergie solaire</a></h3>
 
                 <span class="sub-title">Some FAQ’s</span>
 
-                <h2>General Questions</h2>
+                <h2>FAQ</h2>
 
                <span class="divider"></span>
 
