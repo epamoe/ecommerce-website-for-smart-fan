@@ -26,7 +26,7 @@ Route::group(['namespace'=>'App\Http\Controllers\Frontend'],function(){
 
 Route::group(['namespace'=>'App\Http\Controllers\Backend'],function(){
 
-Route::get('back','HomeController@index')->name('back.home');
+Route::get('dashboard','HomeController@index')->name('back.home');
 
 });
 

@@ -18,9 +18,9 @@
 
 
 
-<link rel="shortcut icon" href="{{asset('frontend/images/favicon.png')}}" type="image/x-icon">
+<link rel="shortcut icon" href="{{asset('frontend/images/logo.png')}}" type="image/x-icon">
 
-<link rel="icon" href="{{asset('frontend/images/favicon.png')}}" type="image/x-icon">
+<link rel="icon" href="{{asset('frontend/images/logo.png')}}" type="image/x-icon">
 
 <!--Color Switcher Mockup-->
 
@@ -208,11 +208,11 @@
 
                             <!-- Quote Btn -->
 
-                            <div class="btn-box">
+                            <!-- <div class="btn-box">
 
                                 <a href="{{route('signin')}}" class="theme-btn btn-style-one"><span class="btn-title"><i class="flaticon-chair"></i> Se connectez   </span></a>
 
-                            </div>
+                            </div> -->
 
                         </div>
 
@@ -1141,8 +1141,8 @@ fonctionnant a l’ énergie solaire</a></h3>
 
 
 
-                <!-- Client Block -->
-
+           
+<!-- 
                 <div class="client-block col-lg-3 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="300ms">
 
                     <figure class="image-box"><a href="#"><img src="{{asset('frontend/images/clients/2.jpg')}}" alt=""></a></figure>
@@ -1151,53 +1151,52 @@ fonctionnant a l’ énergie solaire</a></h3>
 
 
 
-                <!-- Client Block -->
+                
 
                 <div class="client-block col-lg-3 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="600ms">
 
                     <figure class="image-box"><a href="#"><img src="{{asset('frontend/images/clients/3.jpg')}}" alt=""></a></figure>
 
-                </div>
+                </div> -->
 
 
 
-                <!-- Client Block -->
+<!--                
 
                 <div class="client-block col-lg-3 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="900ms">
 
                     <figure class="image-box"><a href="#"><img src="{{asset('frontend/images/clients/4.jpg')}}" alt=""></a></figure>
 
-                </div>
+                </div> -->
 
 
 
-                <!-- Client Block -->
-
-                <div class="client-block col-lg-3 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="1200ms">
+                
+                <!-- <div class="client-block col-lg-3 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="1200ms">
 
                     <figure class="image-box"><a href="#"><img src="{{asset('frontend/images/clients/5.jpg')}}" alt=""></a></figure>
 
-                </div>
+                </div> -->
 
 
 
-                <!-- Client Block -->
-
+             
+<!-- 
                 <div class="client-block col-lg-3 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="1500ms">
 
                     <figure class="image-box"><a href="#"><img src="{{asset('frontend/images/clients/6.jpg')}}" alt=""></a></figure>
 
-                </div>
+                </div> -->
 
 
 
-                <!-- Client Block -->
+<!--               
 
                 <div class="client-block col-lg-3 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="1800ms">
 
                     <figure class="image-box"><a href="#"><img src="{{asset('frontend/images/clients/7.jpg')}}" alt=""></a></figure>
 
-                </div>
+                </div> -->
 
             </div>
 
@@ -1221,9 +1220,9 @@ fonctionnant a l’ énergie solaire</a></h3>
 
                 <div class="sec-title text-center light">
 
-                    <span class="sub-title">Get The Latest Updates</span>
+                    <span class="sub-title">Souscription à notre newsletter</span>
 
-                    <h2>Signup For Newsletter</h2>
+                    <h2>Votre adresse mail</h2>
 
                     <div class="divider"></div>
 
@@ -1249,7 +1248,7 @@ fonctionnant a l’ énergie solaire</a></h3>
 
 
 
-                <div class="text">If You Want to Update For on Our Site a#<a href="#">Subscribe</a> Now.</div>
+              
 
             </div>
 
@@ -1273,9 +1272,9 @@ fonctionnant a l’ énergie solaire</a></h3>
 
                 <div class="text-center">
 
-                    <div class="footer-logo"><a href="#"><img src="{{asset('frontend/images/logo-2.png')}}" alt=""></a></div>
+                    <div class="footer-logo"><a href="#"><img style="width:150px" src="{{asset('frontend/images/logo.png')}}" alt=""></a></div>
 
-                    <div class="text">We have very good strength in innovative technology and tools with over 35 years of experience. We makes long-term investments goal in global companies in different sectors, mainly in Europe and other countries.</div> 
+                    <div class="text">usine de production numérique 4.0 dédiée à la fabrication des ventilateurs intelligents antipaludiques</div> 
 
                 </div>
 
@@ -1299,7 +1298,7 @@ fonctionnant a l’ énergie solaire</a></h3>
 
         <div class="footer-bottom">
 
-            <div class="copyright-text">Copyright © 2022 All Rights Reserved by <a href="#">ThemeCraze</a></div>
+            <div class="copyright-text">Copyright © 2022 All Rights Reserved by <a href="#">SMART FAN TECHNOLOGY</a></div>
 
         </div>
 
@@ -1325,33 +1324,7 @@ fonctionnant a l’ énergie solaire</a></h3>
 
 <!-- Color Palate -->
 
-<div class="color-palate">
 
-    <div class="color-trigger">
-
-        <i class="fa fa-cog"></i>
-
-    </div>
-
-    <div class="color-palate-head">
-
-        <h6>Choose Your Demo</h6>
-
-    </div>
-
-    <ul class="box-version option-box"> <li>Full width</li> <li class="box">Boxed</li> </ul>
-
-    <ul class="rtl-version option-box"> <li>LTR Version</li> <li class="rtl">RTL Version</li> </ul>
-
-    <div class="palate-foo">
-
-        <span>You will find much more options for colors and styling in admin panel. This color picker is used only for demonstation purposes.</span>
-
-    </div>
-
-    <a href="#" class="purchase-btn">Purchase now</a>
-
-</div><!-- End Color Switcher -->
 
 
 
