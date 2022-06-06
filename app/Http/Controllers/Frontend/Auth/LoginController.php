@@ -14,6 +14,12 @@ class LoginController extends Controller
     }
 
 
+    public function logout()
+    {
+        auth()->logout();
+        return redirect('/');
+    }
+
     /**
      * Handle an authentication attempt.
      *

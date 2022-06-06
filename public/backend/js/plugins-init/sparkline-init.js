@@ -185,6 +185,19 @@
 		}	
 	}	
 	
+
+	// var sparkLine12 = function(){
+	// 	if(jQuery('#sparkline12').length > 0 ){
+	// 		//Pie
+	// 		$("#sparkline12").sparkline([24, 61, 51], {
+	// 			type: "pie",
+	// 			height: "100",
+	// 			resize: !0,
+	// 			sliceColors: ["rgba(179, 204, 255, 1)", "rgba(157, 189, 255, 1)", "rgba(112, 153, 237, 1)"]
+	// 		});
+	// 	}	
+	// }	
+	
 	var sparkLine12 = function(){
 		if(jQuery('#sparkline12').length > 0 ){
 			//Pie
@@ -192,7 +205,7 @@
 				type: "pie",
 				height: "100",
 				resize: !0,
-				sliceColors: ["rgba(179, 204, 255, 1)", "rgba(157, 189, 255, 1)", "rgba(112, 153, 237, 1)"]
+				sliceColors: ["rgba(179, 204, 255, 1)"]
 			});
 		}	
 	}	

@@ -18,13 +18,16 @@
 
 
 
-<link rel="shortcut icon" href="{{asset('frontend/images/logo.png')}}" type="image/x-icon">
+<link rel="shortcut icon" href="{{asset('frontend/images/logo.jpg')}}" type="image/x-icon">
 
-<link rel="icon" href="{{asset('frontend/images/logo.png')}}" type="image/x-icon">
+<link rel="icon" href="{{asset('frontend/images/logo.jpg')}}" type="image/x-icon">
 
 <!--Color Switcher Mockup-->
 
 <link href="{{asset('frontend/css/color-switcher-design.css')}}" rel="stylesheet">
+
+<link rel="stylesheet" href="{{asset('frontend/dist/css/splide.min.css')}}">
+
 
 
 
@@ -44,7 +47,7 @@
 
 <body>
 
-
+@include('flashMessage')
 
 <div class="page-wrapper">
 
@@ -98,13 +101,13 @@
 
         <!-- End Header Top -->
 
-        
+
 
         <!-- Header Lower -->
 
         <div class="header-lower">
 
-            <div class="auto-container">    
+            <div class="auto-container">
 
                 <!-- Main box -->
 
@@ -112,7 +115,7 @@
 
                     <div class="logo-box">
 
-                        <div class="logo"><a href=""><img src="{{asset('frontend/images/logo.png')}}"  style="width:100px; height:70px" alt="" title=""></a></div>
+                    <div class="logo"><a href=""><img src="{{asset('frontend/images/logo.jpg')}}"  style="width:64px" class="img-fluid" alt="" title=""></a></div>
 
                     </div>
 
@@ -122,13 +125,13 @@
 
                         <ul class="social-icon-four">
 
-                            <li><a href="#"><span class="fab fa-dribbble"></span></a></li>
+                            <li><a href="https://www.facebook.com/smartfantech"><span class="fab fa-facebook-f"></span></a></li>
 
-                            <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                            <li><a href="https://www.linkedin.com/company/smart-fan-technology/"><span class="fab fa-linkedin"></span></a></li>
 
-                            <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                            {{-- <li><a href="#"><span class="fab fa-twitter"></span></a></li>
 
-                            <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+                            <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li> --}}
 
                         </ul>
 
@@ -140,7 +143,7 @@
 
                             <div class="navbar-header">
 
-                                <!-- Toggle Button -->      
+                                <!-- Toggle Button -->
 
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -154,7 +157,7 @@
 
                             </div>
 
-                            
+
 
                             <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
 
@@ -162,29 +165,29 @@
 
                                     <li ><a href="#">Accueil</a>
 
-                                       
+
 
                                     </li>
 
-                                    <li ><a href="#">A Propos</a>
+                                    <li ><a href="#about">A Propos</a>
 
-                                       
 
-                                    </li>
-
-                                    <li ><a href="#">Notre Produit</a>
-
-                                     
 
                                     </li>
 
-                                    <li ><a href="#">Contact</a>
-                                       
+                                    <li ><a href="#product">Nos Produits</a>
+
+
+
                                     </li>
 
-                                  
+                                    <li ><a class=" search-btn search-box-outer" href="#">Contact</a>
 
-                                  
+                                    </li>
+
+
+
+
 
                                 </ul>
 
@@ -196,7 +199,7 @@
 
                         </nav>
 
-                        
+
 
                         <!-- Main Menu End-->
 
@@ -204,15 +207,15 @@
 
                             <!-- Search Btn -->
 
-                            
+
 
                             <!-- Quote Btn -->
 
-                            <!-- <div class="btn-box">
+                          <div class="btn-box">
 
                                 <a href="{{route('signin')}}" class="theme-btn btn-style-one"><span class="btn-title"><i class="flaticon-chair"></i> Se connectez   </span></a>
 
-                            </div> -->
+                            </div>
 
                         </div>
 
@@ -230,7 +233,7 @@
 
         <div class="sticky-header">
 
-            <div class="auto-container">            
+            <div class="auto-container">
 
 
 
@@ -238,7 +241,7 @@
 
                     <div class="logo-box">
 
-                        <div class="logo"><a href="index.html"><img src="{{asset('frontend/images/logo.png')}}"   style="height: 400px;width:100px" alt="" title=""></a></div>
+                        <div class="logo"><a href="index.html"><img src="{{asset('frontend/images/logo.jpg')}}"   style="" class="img-fluid" alt="" title=""></a></div>
 
                         <div class="upper-right">
 
@@ -254,7 +257,7 @@
 
                     </div>
 
-                    
+
 
                     <nav class="main-menu navbar-expand-md">
 
@@ -274,7 +277,7 @@
 
         <div class="mobile-header">
 
-            <div class="logo"><a href="index.html"><img src="{{asset('frontend/images/logo.png')}}" alt="" title=""></a></div>
+            <div class="logo"><a href="index.html"><img src="{{asset('frontend/images/logo.jpg')}}" alt="" title=""></a></div>
 
 
 
@@ -310,7 +313,7 @@
 
             <div class="menu-backdrop"></div>
 
-            
+
 
             <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
 
@@ -318,7 +321,7 @@
 
                 <div class="upper-box">
 
-                    <div class="nav-logo"><a href="index.html"><img src="{{asset('frontend/images/logo.png')}}" alt="" title=""></a></div>
+                    <div class="nav-logo"><a href="index.html"><img src="{{asset('frontend/images/logo.jpg')}}" alt="" title=""></a></div>
 
                     <div class="close-btn"><i class="icon flaticon-close"></i></div>
 
@@ -332,11 +335,11 @@
 
                 <ul class="contact-list-one">
 
-                    <li><i class="flaticon-location"></i> 203 Madison Ave, NY, USA <strong>Address</strong></li>
+                    <li><i class="flaticon-location"></i> PK 10 - Face Genie Militaire, Douala, CAMEROUN <strong>Addresse</strong></li>
 
-                    <li><i class="flaticon-alarm-clock-1"></i>Monday - Friday 9am - 6pm <strong>Timeing</strong></li>
+                    <li><i class="flaticon-alarm-clock-1"></i>Lundi - Vendredi 8h - 18h <strong>Horaires</strong></li>
 
-                    <li><i class="flaticon-email-1"></i> <a href="mailto:envato@gmail.com">envato@gmail.com</a> <strong>Mail to us</strong></li>
+                    <li><i class="flaticon-email-1"></i> <a href="infos@smarfantechnology.com">infos@smarfantechnology.com</a> <strong>Contactez-Nous</strong></li>
 
                 </ul>
 
@@ -344,13 +347,13 @@
 
                 <ul class="social-links">
 
-                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                    <li><a href="https://www.facebook.com/smartfantech"><span class="fab fa-facebook-f"></span></a></li>
 
-                    <li><a href="#"><span class="fab fa-pinterest"></span></a></li>
+                    <li><a href="https://www.linkedin.com/company/smart-fan-technology/"><span class="fab fa-linkedin"></span></a></li>
 
-                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                    {{-- <li><a href="#"><span class="fab fa-twitter"></span></a></li>
 
-                    <li><a href="#"><span class="fab fa-dribbble"></span></a></li>
+                    <li><a href="#"><span class="fab fa-dribbble"></span></a></li> --}}
 
                 </ul>
 
@@ -366,15 +369,51 @@
 
             <button class="close-search"><i class="flaticon-close"></i></button>
 
-            <form method="post" action="blog.html">
+            <form method="post" action="{{route('sendmessage')}}">
+                @csrf
 
                 <div class="form-group">
+  <h3 style="color:white">Contactez-nous</h3>   <br>
+  
+  
+  
+  
 
-                    <input type="search" name="search-field" value="" placeholder="Search" required="">
+  <div class="form-group">
+    <label for="formGroupExampleInput" style="color:white">Objet</label> 
+    <input type="text" class="form-control" name="objet" id="formGroupExampleInput" placeholder="objet">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput" style="color:white">Votre email</label> 
+    <input type="text" class="form-control" name="email" id="formGroupExampleInput" placeholder="email">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput" style="color:white">Votre numéro</label> 
+    <input type="text" class="form-control" name="number" id="formGroupExampleInput" placeholder="numero">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2"style="color:white" >Message</label>
+    <textarea type="text" class="form-control"  name="message" rows="10" >  </textarea>
+  </div>
 
-                    <button type="submit"><i class="fa fa-search"></i></button>
+  <button type="submit" class="btn btn-warning"> Envoyer </button>
+  
+  
+  
+  
+  
+  
+                  <span style="color:white">EMAIL : infos@smarfantechnology.com</span>   <br>
+                   <span style="color:white"> PHONE : (+237) 696 675 082</span> <br>
+                                       <span style="color:white">  ADRESSE :  Douala, Cameroun - PK 10 -  Face Genie militaire </span><br>
+                                       <span style="color:green">  OUVERT DE LUNDI A SAMEDI DE 08H00 A 18H00 </span>
+                   
 
+                 
                 </div>
+                
+                
+                
 
             </form>
 
@@ -410,7 +449,7 @@
 
             </div>
 
-            
+
 
             <!--Appointment Form-->
 
@@ -452,17 +491,17 @@
 
             </div>
 
-            
+
 
 
 
             <ul class="contact-list-one">
 
-                <li><i class="flaticon-location"></i> 203 Madison Ave, NY, USA <strong>Address</strong></li>
+                <li><i class="flaticon-location"></i> PK 10 - Face Genie Militaire, Douala, CAMEROUN <strong>Addresse</strong></li>
 
-                <li><i class="flaticon-alarm-clock-1"></i>Monday - Friday 9am - 6pm <strong>Timeing</strong></li>
+                <li><i class="flaticon-alarm-clock-1"></i>Lundi - Vendredi 08h - 18h <strong>Horaire</strong></li>
 
-                <li><i class="flaticon-email-1"></i> <a href="mailto:envato@gmail.com">envato@gmail.com</a> <strong>Mail to us</strong></li>
+                <li><i class="flaticon-email-1"></i> <a href="infos@smarfantechnology.com">infos@smarfantechnology.com</a> <strong>Contactez-Nous</strong></li>
 
             </ul>
 
@@ -496,7 +535,7 @@
 
                 <div class="auto-container">
 
-                    <div class="image-layer" style="background-image: url({{asset('frontend/images/resource/slide-1.jpg')}});"></div>
+            <div class="image-layer" style="background-image: url({{asset('plan.jpg')}});"></div>
 
 
 
@@ -504,7 +543,7 @@
 
                         <div class="content-inner">
 
-                            <span class="title animate-1">fabrication des ventilateurs antipaludiques</span>
+                            <span class="title animate-1">Fabrication des ventilateurs et climatisseurs solaires antipalidiques</span>
 
                             <h2 class="animate-2">SMART FAN TECHNOLOGY</h2>
 
@@ -516,7 +555,7 @@
 
                                     <li><i class="far fa-calendar-alt"></i> Lundi-samedi <br>08h-18h00</li>
 
-                                    <li><i class="fa fa-map-marker-alt"></i> Cameroun,Yaoundé<br>Biyem-assi</li>
+                                    <li><i class="fa fa-map-marker-alt"></i> Douala, Cameroun<br>PK 10 -  Face Genie militaire</li>
 
                                 </ul>
 
@@ -524,15 +563,15 @@
 
                             <div class="btn-box animate-4">
 
-                                <a href="buy-ticket.html" class="theme-btn btn-style-one"><span class="btn-title">Book Now</span></a>
+                                {{-- <a href="buy-ticket.html" class="theme-btn btn-style-one"><span class="btn-title">Book Now</span></a> --}}
 
-                                <a href="https://www.youtube.com/watch?v=kxPCFljwJws" class="theme-btn btn-style-two lightbox-image"><span class="btn-title">Video de présentation</span></a>
+                                <a href="https://www.youtube.com/watch?v=jQ5lO9r4TGQ" class="theme-btn btn-style-two lightbox-image"><span class="btn-title">Video de présentation</span></a>
 
                             </div>
 
                         </div>
 
-                    </div>  
+                    </div>
 
                 </div>
 
@@ -556,14 +595,14 @@
 
                 <div class="auto-container">
 
-                    <div class="image-layer" style="background-image: url({{asset('frontend/images/resource/slide-1.jpg')}});"></div>
+                    <div class="image-layer" style="background-image: url({{asset('plan.jpg')}});"></div>
 
 
                     <div class="content-box">
 
                         <div class="content-inner">
 
-                            <span class="title animate-1">fabrication des ventilateurs antipaludiques</span>
+                            <span class="title animate-1">Fabrication des ventilateurs et climatisseurs solaires antipalidiques</span>
 
                             <h2 class="animate-2">SMART FAN TECHNOLOGY</h2>
 
@@ -575,7 +614,7 @@
 
                                     <li><i class="far fa-calendar-alt"></i> Lundi-samedi <br>08h-18h00</li>
 
-                                    <li><i class="fa fa-map-marker-alt"></i> Cameroun,Yaoundé<br>Biyem-assi</li>
+                                    <li><i class="fa fa-map-marker-alt"></i> Douala, Cameroun<br>PK 10 -  Face Genie militaire</li>
 
                                 </ul>
 
@@ -583,15 +622,15 @@
 
                             <div class="btn-box animate-4">
 
-                                <a href="buy-ticket.html" class="theme-btn btn-style-one"><span class="btn-title">Book Now</span></a>
+                                {{-- <a href="buy-ticket.html" class="theme-btn btn-style-one"><span class="btn-title">Book Now</span></a> --}}
 
-                                <a href="https://www.youtube.com/watch?v=kxPCFljwJws" class="theme-btn btn-style-two lightbox-image"><span class="btn-title">Video Demo</span></a>
+                                <a href="https://www.youtube.com/watch?v=jQ5lO9r4TGQ" class="theme-btn btn-style-two lightbox-image"><span class="btn-title">Video De presentation</span></a>
 
                             </div>
 
                         </div>
 
-                    </div>  
+                    </div>
 
                 </div>
 
@@ -605,7 +644,7 @@
 
 
 
-    <section class="about-section">
+    <section id="about" class="about-section">
 
         <div class="auto-container">
 
@@ -623,7 +662,7 @@
 
                         <figure class="image-1 wow zoomIn" data-wow-delay="300ms"><img src="{{asset('frontend/images/resource/vector.png')}}" alt=""/></figure>
 
-                        <a href="https://www.youtube.com/watch?v=kxPCFljwJws" class="lightbox-image play-btn wow zoomIn" data-wow-delay="1200ms"><span class="icon fa fa-play"></span></a>
+                        <a href="https://www.youtube.com/watch?v=jQ5lO9r4TGQ" class="lightbox-image play-btn wow zoomIn" data-wow-delay="1200ms"><span class="icon fa fa-play"></span></a>
 
                     </div>
 
@@ -639,7 +678,7 @@
 
                         <div class="sec-title">
 
-                            <span class="sub-title">WELCOME SMART FAN </span>
+                            {{-- <span class="sub-title">WELCOME SMART FAN </span> --}}
 
                             <h2>SMART FAN TECHNOLOGY</h2>
 
@@ -647,13 +686,32 @@
 
                         </div>
 
-                        <p>Smart Fan Technology est une usine de production numérique 4.0 dédiée à la fabrication des ventilateurs intelligents antipaludiques fonctionnant à l'énergie solaire. Doté d'objets connectés, chaque  ventilateur (Smart Fan)  est commandé à distance par téléphone grâce aux modules GMS et par une télécommande. Il diffuse pendant son fonctionnement, une solution répulsive 100% naturelle, sans effet sur l'homme, dans l'environnement dans lequel il se trouve, afin de repousser les moustiques, vecteurs de paludisme.   </p>
+                        <p style="font-size: 1.2em; text-align: justify;">SMART FAN TECHNOLOGY est une Entreprise spécialisée dans le développement des solutions technologiques innovantes associées aux systèmes de ventilation domestiques et industriels.<br/>
+
+                            Avec une vision, Devenir la première industrie numérique 4.0 basée sur la plasturgie en Afrique Francophone, nous développons une technologie qui allie injection plastique et thermoformage des pièces en matières composites.<br/>
+
+                            Nos solutions sont orientées vers :
+                            <ul>
+                                <li style="font-size: 1.2em">
+                                    -&nbsp;&nbsp;&nbsp;L’électroménager
+                                </li>
+                                <li style="font-size: 1.2em">
+                                    -&nbsp;&nbsp;&nbsp;La santé
+                                </li>
+                                <li style="font-size: 1.2em">
+                                    -&nbsp;&nbsp;&nbsp;L’aviation
+                                </li>
+                                <li style="font-size: 1.2em">
+                                    -&nbsp;&nbsp;&nbsp;L’automobile
+                                </li>
+                            </ul>
+                        </p>
 
                         <!-- <p> Rub shoulders with international technology executives, top-tier investors, policymakers, startups, and scale-ups, during two days of business, knowledge sharing and a whole lot of fun. </p> -->
 
                         <div class="btn-box">
 
-                            <a href="buy-ticket.html" class="theme-btn btn-style-one"><span class="btn-title">Nous contactez</span></a>
+                            <a href="#" class="theme-btn btn-style-one search-btn search-box-outer"><span class="btn-title">Nous contactez</span></a>
 
                         </div>
 
@@ -672,142 +730,18 @@
 
     <!-- About Section Three-->
 
-  
+
     <!-- End About Section Three -->
 
 
 
     <!-- Feature Section Three-->
 
-   
 
 
-    <!-- News Section -->
+      <!-- Schedule Section -->
 
-    <section class="news-section alternate">
-
-        <div class="auto-container">
-
-            <div class="sec-title text-center">
-
-                <span class="sub-title">Nos atouts</span>
-
-                <h2>Nos atouts</h2>
-
-                <span class="divider"></span>
-
-            </div>
-
-
-
-            <div class="row">
-
-                <!-- News Block Four -->
-
-                <div class="news-block style-four col-lg-4 col-md-6 col-sm-12 wow fadeInRight">
-
-                    <div class="inner-box">
-
-                        <div class="image-box">
-
-                            <span class="tag">Environnemental</span>
-
-                            <figure class="image"  style="text-align:center" ><a href="blog-single.html"><img style="height: 150px; width:250px" src="{{asset('frontend/images/resource/news-1.jpg')}}" alt=""></a></figure>
-
-                        </div>
-
-                        <div class="lower-content mt-3">
-
-                            
-                           
-
-                            <h4><a href="blog-single.html">Solution 100% naturelle </a></h4>
-
-                            <div class="text">Fait à base d'huiles essentielles
-d’eucalyptus citronnées</div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- News Block Four -->
-
-                <div class="news-block style-four col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="400ms">
-
-                    <div class="inner-box">
-
-                        <div class="image-box">
-
-                            <span class="tag">Santé</span>
-
-                            <figure class="image"><a href="blog-single.html"><img   style="height: 150px;" src="{{asset('frontend/images/resource/news-2.jpg')}}" alt=""></a></figure>
-
-                        </div>
-
-                        <div class="lower-content mt-3">
-
-                            
-
-
-                            <h4><a href="blog-single.html ">Favorise le Bien être et la bonne
-santé </a></h4>
-
-                            <!-- <div class="text">Single stroke at the present moment and yet I feel that lorem quis bibendum auctor.</div> -->
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- News Block Four -->
-
-                <div class="news-block style-four col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="800ms">
-
-                    <div class="inner-box">
-
-                        <div class="image-box">
-
-                            <span class="tag">Economie</span>
-
-                            <figure class="image"><a href="blog-single.html"><img  style="height: 150px; width:250px" src="{{asset('frontend/images/resource/news-3.jpg')}}" alt=""></a></figure>
-
-                        </div>
-
-                        <div class="lower-content mt-3">
-
-                          
-
-                            <h4><a href="blog-single.html">Entraine une Optimisation
-économique et technique </a></h4>
-
-                         
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!--End News Section -->
-
-
-
-     <!-- Schedule Section -->
-
-    <section class="schedule-section">
+    <section id="product" class="schedule-section">
 
         <div class="anim-icons full-width">
 
@@ -825,7 +759,7 @@ santé </a></h4>
 
                 <span class="sub-title">Ventilateur solaire</span>
 
-                <h2>Notre produit</h2>
+                <h2>Nos produits</h2>
 
                 <span class="divider"></span>
 
@@ -835,7 +769,7 @@ santé </a></h4>
 
             <div class="schedule-tabs tabs-box">
 
-              
+
 
                 <div class="tabs-content">
 
@@ -846,30 +780,49 @@ santé </a></h4>
                         <div class="schedule-timeline">
 
                             <!-- schedule Block -->
+                            {{-- <div class="schedule-block-three"> --}}
+                                {{-- <div class="inner-box"> --}}
+                                    {{-- <div class="inner"> --}}
+                                        {{-- <div class="card mb-3"> --}}
+                                            {{-- <div class="row g-0"> --}}
+                                              {{-- <div class="col-md-4"> --}}
+                                                {{-- <img src="{{asset('frontend/images/resource/d.JPG')}}" class="img-fluid rounded-start" alt="..."> --}}
+                                              {{-- </div> --}}
+                                              {{-- <div class="col-md-8"> --}}
+                                                {{-- <div class="card-body"> --}}
+                                                  {{-- <h5 class="card-title">Card title</h5> --}}
+                                                  {{-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> --}}
+                                                  {{-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> --}}
+                                                {{-- </div> --}}
+                                              {{-- </div> --}}
+                                            {{-- </div> --}}
+                                        {{-- </div> --}}
+
+                                    {{-- </div> --}}
+                                {{-- </div> --}}
+                            {{-- </div> --}}
 
                             <div class="schedule-block-three">
 
                                 <div class="inner-box">
 
-                                  
+
 
                                     <div class="inner">
 
                                         <figure class="thumb">
 
-                                            <img src="{{asset('frontend/images/resource/schedule-1.jpg')}}" alt="">
+                                            <img src="{{asset('frontend/images/resource/ventilo.png')}}" alt="">
 
                                         </figure>
 
                                         <div class="speaker-info">
 
-                                            <h4 class="name">Usine de fabrication </h4>
+                                            <h4 class="name">SMART FAN </h4>
 
-                                            <h3><a href="schedule-detail.html">Mise en place d’une Usine Numérique
-4.0 basée sur la plasturgie avec des
-sites de production intelligents</a></h3>
+                                            <h3><a href="schedule-detail.html">Votre Eco-ventilateur Antipaludique adapté à votre quotidien</a></h3>
 
-                                            <div class="location"><strong>Location:</strong> AFRIQUE</div>
+                                            {{-- <div class="location"><strong>Location:</strong> AFRIQUE</div> --}}
 
                                         </div>
 
@@ -887,23 +840,21 @@ sites de production intelligents</a></h3>
 
                                 <div class="inner-box">
 
-                                
+
 
                                     <div class="inner">
 
                                         <figure class="thumb">
 
-                                            <img src="{{asset('frontend/images/resource/schedule-2.jpg')}}" alt="">
+                                            <img src="{{asset('frontend/images/resource/clim.png')}}" alt="">
 
                                         </figure>
 
                                         <div class="speaker-info">
 
-                                            <h4 class="name">ventilateur solaire </h4>
+                                            <h4 class="name">SMART FRESH</h4>
 
-                                            <h3><a href="schedule-detail.html">Conception et Fabrication des Systèmes de
-ventilation (ventilateurs,...) intelligents antipaludiques
-fonctionnant a l’ énergie solaire</a></h3>
+                                            <h3><a href="schedule-detail.html">Votre Climatiseur antipaludique conçu pour votre confort</a></h3>
 
                                             <!-- <div class="location"><strong>Location:</strong> Hall 1, Building A , Golden Street , Southafrica</div> -->
 
@@ -917,15 +868,48 @@ fonctionnant a l’ énergie solaire</a></h3>
 
 
 
-                        
+                            <div class="schedule-block-three">
 
-                  
+                                <div class="inner-box">
 
 
 
-                       
-                           
-                
+                                    <div class="inner">
+
+                                        <figure class="thumb">
+
+                                            <img src="{{asset('frontend/images/resource/plafo.png')}}" alt="">
+
+                                        </figure>
+
+                                        <div class="speaker-info">
+
+                                            <h4 class="name">SMART CEILING </h4>
+
+                                            <h3><a href="schedule-detail.html">Du confort en toute simplicité pour des petits budgets </a></h3>
+
+                                            {{-- <div class="location"><strong>Location:</strong> AFRIQUE</div> --}}
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -933,7 +917,7 @@ fonctionnant a l’ énergie solaire</a></h3>
 
 
                             <!-- schedule Block -->
-<!-- 
+<!--
                             <div class="schedule-block-three even">
 
                                 <div class="inner-box">
@@ -986,7 +970,134 @@ fonctionnant a l’ énergie solaire</a></h3>
 
     </section>
 
-    <!--End schedule Section -->
+<!--End schedule Section -->
+
+
+
+  
+
+    <!-- News Section -->
+
+    <section class="news-section alternate">
+
+        <div class="auto-container">
+
+            <div class="sec-title text-center">
+
+                <span class="sub-title">Nos atouts</span>
+
+                <h2>Nos atouts</h2>
+
+                <span class="divider"></span>
+
+            </div>
+
+
+
+            <div class="row d-flex align-items-stretch">
+
+                <!-- News Block Four -->
+
+                <div class="news-block style-four col-lg-4 col-md-6 col-sm-12 wow fadeInRight d-flex align-items-stretch">
+
+                    <div class="inner-box">
+
+                        <div class="image-box">
+
+                            <span class="tag">Environnemental</span>
+
+                            <figure class="image"  style="text-align:center" ><a href="blog-single.html"><img style="height: 150px; width:250px" src="{{asset('frontend/images/resource/news-1.jpg')}}" alt=""></a></figure>
+
+                        </div>
+
+                        <div class="lower-content mt-3">
+
+
+
+
+                            <h4><a href="blog-single.html">Solution 100% naturelle </a></h4>
+
+                            <div class="text">Fait à base d'huiles essentielles
+d’eucalyptus citronnées</div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- News Block Four -->
+
+                <div class="news-block style-four col-lg-4 col-md-6 col-sm-12 wow fadeInRight d-flex align-items-stretch" data-wow-delay="400ms">
+
+                    <div class="inner-box">
+
+                        <div class="image-box">
+
+                            <span class="tag">Santé</span>
+
+                            <figure class="image"><a href="blog-single.html"><img   style="height: 150px;" src="{{asset('frontend/images/resource/news-2.jpg')}}" alt=""></a></figure>
+
+                        </div>
+
+                        <div class="lower-content mt-3">
+
+
+
+
+                            <h4><a href="blog-single.html ">Favorise le Bien être et la bonne
+santé </a></h4>
+
+                            <!-- <div class="text">Single stroke at the present moment and yet I feel that lorem quis bibendum auctor.</div> -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- News Block Four -->
+
+                <div class="news-block style-four col-lg-4 col-md-6 col-sm-12 wow fadeInRight d-flex align-items-stretch" data-wow-delay="800ms">
+
+                    <div class="inner-box">
+
+                        <div class="image-box">
+
+                            <span class="tag">Economie</span>
+
+                            <figure class="image"><a href="blog-single.html"><img  style="height: 150px; width:250px" src="{{asset('frontend/images/resource/news-3.jpg')}}" alt=""></a></figure>
+
+                        </div>
+
+                        <div class="lower-content mt-3">
+
+
+
+                            <h4><a href="blog-single.html">Entraine une Optimisation
+économique et technique </a></h4>
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--End News Section -->
+
+
 
 
 
@@ -1030,13 +1141,13 @@ fonctionnant a l’ énergie solaire</a></h3>
 
                         <li class="accordion block active-block">
 
-                            <div class="acc-btn active">What About My Learning Lab Workshop Options? <span class="icon fa fa-plus"></span></div>
+                            <div class="acc-btn active">Où êtes-vous situés ?  <span class="icon fa fa-plus"></span></div>
 
                             <div class="acc-content current">
 
                                 <div class="content">
 
-                                    <p>Learning Lab registrations will also be rolled over to 2022 conference. The learning lab workshop schedule will be revised for 2022, and we will announce the new schedule when it is available.</p>
+                                    <p>Nous sommes situés à Douala, Capitale Économique du Cameroun. Lieu dit Pk10 - Face Génie Militaire.</p>
 
                                 </div>
 
@@ -1050,33 +1161,13 @@ fonctionnant a l’ énergie solaire</a></h3>
 
                         <li class="accordion block">
 
-                            <div class="acc-btn"> How Do I Rollover My Conference Registration? <span class="icon fa fa-plus"></span></div>
+                            <div class="acc-btn"> Comment Fonctionnent vos ventilateurs ?  <span class="icon fa fa-plus"></span></div>
 
                             <div class="acc-content">
 
                                 <div class="content">
 
-                                    <p>Learning Lab registrations will also be rolled over to 2022 conference. The learning lab workshop schedule will be revised for 2022, and we will announce the new schedule when it is available.</p>
-
-                                </div>
-
-                            </div>
-
-                        </li>
-
-                        
-
-                        <!--Block-->
-
-                        <li class="accordion block">
-
-                            <div class="acc-btn">How Do i Cancel My Hotel Reservation? <span class="icon fa fa-plus"></span></div>
-
-                            <div class="acc-content">
-
-                                <div class="content">
-
-                                    <p>Learning Lab registrations will also be rolled over to 2022 conference. The learning lab workshop schedule will be revised for 2022, and we will announce the new schedule when it is available.</p>
+                                    <p>Doté de Capteurs (Objets Connectés), chaque Smart Fan est commandé à distance par une télécommande ou un téléphone grâce aux modules GMS. Il diffuse pendant son fonctionnement une solution répulsive 100% naturelle sans effet sur l’homme, dans l’environnement dans lequel il se trouve afin de neutraliser les moustiques vecteurs de paludisme. Il fonctionne à l’énergie solaire photovoltaïque comme première source d’alimentation.</p>
 
                                 </div>
 
@@ -1090,13 +1181,34 @@ fonctionnant a l’ énergie solaire</a></h3>
 
                         <li class="accordion block">
 
-                            <div class="acc-btn">When is The Next APQC Conference? <span class="icon fa fa-plus"></span></div>
+                            <div class="acc-btn">Est-il toujours possible d’investir dans le projet ?  <span class="icon fa fa-plus"></span></div>
 
                             <div class="acc-content">
 
                                 <div class="content">
 
-                                    <p>Learning Lab registrations will also be rolled over to 2022 conference. The learning lab workshop schedule will be revised for 2022, and we will announce the new schedule when it is available.</p>
+                                    <p>Oui, c’est toujours possible d’investir dans le projet. Pour cela veuillez contacter directement les promoteurs dans le Menu Contact où vous rendre dans nos bureaux.<br/>
+                                        L’investissement peut se faire en capital,  sous forme de prêt ou de Don.</p>
+
+                                </div>
+
+                            </div>
+
+                        </li>
+
+
+
+                        <!--Block-->
+
+                        <li class="accordion block">
+
+                            <div class="acc-btn">Comment devenir partenaire / représentant de Smart Fan Technology hors du Cameroun ? <span class="icon fa fa-plus"></span></div>
+
+                            <div class="acc-content">
+
+                                <div class="content">
+
+                                    <p>C’est possible grâce à un protocole d’accord à établir entre vous et les promoteurs du projet. Pour cela veuillez nous envoyer un mail directement via l’onglet Contact ou via <a href="mailto:infos@smartfantechnology.com">infos@smartfantechnology.com</a>.</p>
 
                                 </div>
 
@@ -1128,40 +1240,74 @@ fonctionnant a l’ énergie solaire</a></h3>
     <section class="clients-section alternate">
 
         <div class="auto-container">
+            <div class="content-box">
+                <div class="sec-title text-center dark">
 
-            <div class="row justify-content-center">
+                    <span class="sub-title">Ils nous font confiance</span>
 
-                <!-- Client Block -->
+                    <h2>Nos partenaires</h2>
 
-                <div class="client-block col-lg-3 col-md-6 col-sm-12 wow fadeInRight">
+                    <div class="divider"></div>
 
-                    <figure class="image-box"><a href="#"><img src="{{asset('frontend/images/clients/1.jpg')}}" alt=""></a></figure>
+                </div>
+            </div>
 
+            <div class="row justify-content-center splide" role="group" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <!-- Client Block -->
+                        <li class="splide__slide">
+                            <div class="wow fadeInRight">
+
+                                <figure class="image-box"><a href="#"><img src="{{asset('frontend/images/clients/1.jpg')}}" alt=""  style="height : 300px "></a></figure>
+
+                            </div>
+                        </li>
+
+
+
+
+                        <li class="splide__slide">
+                            <div class="wow fadeInRight" data-wow-delay="300ms">
+
+                                <figure class="image-box"><a href="#"><img src="{{asset('frontend/images/clients/8.png')}}"  style="height : 300px " alt=""></a></figure>
+
+                            </div>
+                        </li>
+
+
+
+
+                        <li class="splide__slide">
+                            <div class="wow fadeInRight" data-wow-delay="600ms">
+
+                                <figure class="image-box"><a href="#"><img src="{{asset('frontend/images/clients/9.jpg')}}" style="height : 300px " alt=""></a></figure>
+
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="wow fadeInRight" data-wow-delay="600ms">
+
+                                <figure class="image-box"><a href="#"><img src="{{asset('frontend/images/clients/10.png')}}" style="height : 300px " alt=""></a></figure>
+
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="wow fadeInRight" data-wow-delay="600ms">
+
+                                <figure class="image-box"><a href="#"><img src="{{asset('frontend/images/clients/11.png')}}" style="max-height : 230px " alt=""></a></figure>
+
+                            </div>
+                        </li>
+                    </ul>
                 </div>
 
 
 
-           
-<!-- 
-                <div class="client-block col-lg-3 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="300ms">
 
-                    <figure class="image-box"><a href="#"><img src="{{asset('frontend/images/clients/2.jpg')}}" alt=""></a></figure>
-
-                </div>
-
-
-
-                
-
-                <div class="client-block col-lg-3 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="600ms">
-
-                    <figure class="image-box"><a href="#"><img src="{{asset('frontend/images/clients/3.jpg')}}" alt=""></a></figure>
-
-                </div> -->
-
-
-
-<!--                
+<!--
 
                 <div class="client-block col-lg-3 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="900ms">
 
@@ -1171,7 +1317,7 @@ fonctionnant a l’ énergie solaire</a></h3>
 
 
 
-                
+
                 <!-- <div class="client-block col-lg-3 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="1200ms">
 
                     <figure class="image-box"><a href="#"><img src="{{asset('frontend/images/clients/5.jpg')}}" alt=""></a></figure>
@@ -1180,8 +1326,8 @@ fonctionnant a l’ énergie solaire</a></h3>
 
 
 
-             
-<!-- 
+
+<!--
                 <div class="client-block col-lg-3 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="1500ms">
 
                     <figure class="image-box"><a href="#"><img src="{{asset('frontend/images/clients/6.jpg')}}" alt=""></a></figure>
@@ -1190,7 +1336,7 @@ fonctionnant a l’ énergie solaire</a></h3>
 
 
 
-<!--               
+<!--
 
                 <div class="client-block col-lg-3 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="1800ms">
 
@@ -1204,7 +1350,7 @@ fonctionnant a l’ énergie solaire</a></h3>
 
     </section>
 
-    <!--End Clients Section -->
+<!--End Clients Section -->
 
 
 
@@ -1236,9 +1382,9 @@ fonctionnant a l’ énergie solaire</a></h3>
 
                         <div class="form-group">
 
-                            <input type="email" name="field-name" value="" placeholder="Signup For Newsletter" required>
+                            <input type="email" name="field-name" value="" placeholder="Inscrivez-Vous a la Newsletter" required>
 
-                            <button type="submit" class="theme-btn btn-style-two"><span class="btn-title">Subscribe</span></button>
+                            <button type="submit" class="theme-btn btn-style-two"><span class="btn-title">S'inscrire</span></button>
 
                         </div>
 
@@ -1248,7 +1394,7 @@ fonctionnant a l’ énergie solaire</a></h3>
 
 
 
-              
+
 
             </div>
 
@@ -1272,21 +1418,21 @@ fonctionnant a l’ énergie solaire</a></h3>
 
                 <div class="text-center">
 
-                    <div class="footer-logo"><a href="#"><img style="width:150px" src="{{asset('frontend/images/logo.png')}}" alt=""></a></div>
+                    <div class="footer-logo"><a href="#"><img style="width:150px; border-radius: 20px;" src="{{asset('frontend/images/logos.png')}}" alt=""></a></div>
 
-                    <div class="text">usine de production numérique 4.0 dédiée à la fabrication des ventilateurs intelligents antipaludiques</div> 
+                    <div class="text">Usine de production numérique 4.0 dédiée à la fabrication des ventilateurs intelligents antipaludiques</div>
 
                 </div>
 
                 <ul class="social-icon-two mb-0">
 
-                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                    <li><a href="https://www.facebook.com/smartfantech"><span class="fab fa-facebook-f"></span></a></li>
 
-                    <li><a href="#"><span class="fab fa-pinterest"></span></a></li>
-
+                    <li><a href="https://www.linkedin.com/company/smart-fan-technology/"><span class="fab fa-linkedin"></span></a></li>
+{{--
                     <li><a href="#"><span class="fab fa-twitter"></span></a></li>
 
-                    <li><a href="#"><span class="fab fa-dribbble"></span></a></li>
+                    <li><a href="#"><span class="fab fa-dribbble"></span></a></li> --}}
 
                 </ul>
 
@@ -1352,6 +1498,19 @@ fonctionnant a l’ énergie solaire</a></h3>
 
 <script src="{{asset('frontend/js/color-settings.js')}}"></script>
 
+<script src="{{asset('frontend/dist/js/splide.min.js')}}"></script>
+
+<script>
+    var splide = new Splide( '.splide', {
+  type    : 'loop',
+  perPage : 3,
+  autoplay: true,
+} );
+
+splide.mount();
+</script>
+
 </body>
 
 </html>
+

@@ -395,7 +395,7 @@ li {
 }
 
 .social-icon-one li a:hover {
-    background-color: #ffae00;
+    background-color: #438c25;
     color: #ffffff;
 }
 
@@ -437,7 +437,7 @@ li {
 }
 
 .social-icon-two li a:hover {
-    background-color: #ffae00;
+    background-color: #438c25;
     color: #ffffff;
 }
 
@@ -483,7 +483,7 @@ li {
 }
 
 .social-icon-three li a:hover {
-    background-color: #ffae00;
+    background-color: #438c25;
     color: #ffffff;
 }
 
@@ -654,7 +654,7 @@ Theme Btn
     margin-right: 10px;
     font-size: 20px;
     line-height: 1em;
-    color: #ffae00;
+    color: #438c25;
 }
 
 .btn-style-one:before {
@@ -1432,7 +1432,7 @@ hr {
     top: 7px;
     font-size: 38px;
     line-height: 30px;
-    color: #ffae00;
+    color: #438c25;
 }
 
 .contact-list-one li a {
@@ -1453,7 +1453,7 @@ hr {
 }
 
 .nav-toggler:hover {
-    color: #ffae00;
+    color: #438c25;
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
@@ -1596,7 +1596,7 @@ hr {
 
 .main-menu .navigation>li.current>a,
 .main-menu .navigation>li>a:hover {
-    color: #ffae00;
+    color: #438c25;
 }
 
 .main-menu .navigation>li>a:before {
@@ -1850,7 +1850,7 @@ hr {
     height: 40px;
     width: 40px;
     text-align: center;
-    background: #ffae00;
+    background: #438c25;
     border-radius: 50%;
     line-height: 40px;
     font-size: 14px;
@@ -2017,7 +2017,7 @@ hr {
 }
 .main-menu .navigation > li .mega-menu-bar .column > ul > li > a:hover{
     z-index: 1;
-    color: #ffae00;
+    color: #438c25;
 }
 
 .main-menu .navigation > li .mega-menu-bar .column > ul > li > a:hover:after{
@@ -2923,7 +2923,7 @@ hr {
     line-height: 25px;
     font-weight: 700;
     margin-right: 3px;
-    color: #ffae00;
+    color: #438c25;
 }
 
 .contact-list-two li i {
@@ -2932,7 +2932,7 @@ hr {
     top: 7px;
     font-size: 38px;
     line-height: 30px;
-    color: #ffae00;
+    color: #438c25;
 }
 
 .contact-list-two li a {
@@ -3089,7 +3089,7 @@ hr {
     top: 7px;
     font-size: 38px;
     line-height: 30px;
-    color: #ffae00;
+    color: #438c25;
 }
 
 .contact-list-four li a {
@@ -3625,7 +3625,7 @@ Page Title
 .banner-section .content-box .title {
     display: block;
     font-size: 24px;
-    color: #ffae00;
+    color: #438c25;
     font-weight: 700;
     margin-bottom: 15px;
     text-transform: uppercase;
@@ -3899,7 +3899,7 @@ Page Title
     left: 0;
     top: 0;
     font-size: 24px;
-    color: #ffae00;
+    color: #438c25;
     line-height: 50px;
 }
 
@@ -4005,7 +4005,7 @@ a.ui-button:active,
 .time-counter-one h6 {
     position: relative;
     font-size: 18px;
-    color: #ffae00;
+    color: #438c25;
     font-weight: 400;
     margin-bottom: 20px;
     text-align: center;
@@ -4113,7 +4113,7 @@ a.ui-button:active,
 .banner-section-two .content-box .title {
     display: block;
     font-size: 24px;
-    color: #ffae00;
+    color: #438c25;
     font-weight: 700;
     margin-bottom: 25px;
 }
@@ -4161,7 +4161,7 @@ a.ui-button:active,
     top: 7px;
     font-size: 38px;
     line-height: 30px;
-    color: #ffae00;
+    color: #438c25;
 }
 
 .info-list-two li a {
@@ -4368,7 +4368,7 @@ a.ui-button:active,
 
 .about-section .image-3 {
     position: absolute;
-    border: 30px solid #ffae00;
+    border: 30px solid #438c25;
     top: 0;
     left: -50px;
     z-index: 2;
@@ -4564,7 +4564,7 @@ a.ui-button:active,
     width: 40px;
     margin-left: -20px;
     height: 2px;
-    background: #ffae00;
+    background: #438c25;
     content: "";
 }
 
@@ -4743,7 +4743,7 @@ a.ui-button:active,
 .info-box-one h4 {
     font-size: 30px;
     line-height: 36px;
-    color: #ffae00;
+    color: #438c25;
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -5149,7 +5149,7 @@ a.ui-button:active,
 }
 
 .feature-block-two:hover h4 {
-    color: #ffae00;
+    color: #438c25;
 }
 
 .feature-block-two:hover .icon-box .icon,
@@ -5221,7 +5221,7 @@ a.ui-button:active,
 
 .feature-block-three h4 {
     font-size: 22px;
-    color: #ffae00;
+    color: #438c25;
     font-weight: 700;
     margin-bottom: 14px;
 }
@@ -5314,7 +5314,7 @@ a.ui-button:active,
 
 .feature-block-five h4 {
     font-size: 24px;
-    color: #ffae00;
+    color: #438c25;
     font-weight: 700;
     padding-top: 40px;
     margin-top: 40px;
@@ -9986,8 +9986,8 @@ Accordian Box
 .styled-pagination li.next-post a:hover,
 .styled-pagination li.prev-post a:hover {
     color: #ffffff;
-    background: #ffae00;
-    border-color: #ffae00;
+    background: #438c25;
+    border-color: #438c25;
 }
 
 
