@@ -13,6 +13,8 @@
             </select>
         </div> -->
         <!-- <a href="javascript:void(0);" class="btn btn-secondary mb-2"><i class="las la-calendar scale5 mr-3"></i>STATISTIQUES</a> -->
+
+    
     </div>
     
 
@@ -22,20 +24,69 @@
     <div class="col-xl-12 col-xx-8">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Liste des utilisateurs</h4>
+                            <h4 class="card-title">Liste des utilisateurs  </h4>
+                            <div class="form-outline">
+
+                            <form action="" method="post" action="{{route('userlist')}}">
+                                @csrf
+    <input type="search" name="email" class="form-control"  placeholder="Entrez un email"  />  <button class="btn btn-warning d-flex justify-content-center"> valider</button>
+    </form>
+
+   
+  </div>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
+
+                            @if(isset($email))
+                            <table class="table table-bordered table-striped verticle-middle table-responsive-sm">
+                                    <thead>
+                                        <tr>
+                                           
+                                            <th scope="col">Pays</th>
+                                            <th scope="col">Nom</th>
+                                            <th scope="col">Prenom</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Contact</th>
+                                        
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                
+                                       
+                                        <tr>
+                          
+                                            <td>{{($users->country)}}</td>
+                                            <td>
+                                                {{($users->name)}}
+                                            </td>
+                                            <td>
+                                                {{($users->last_name)}}
+                                            </td>
+                                            <td>{{($users->email)}}</td>
+                                            <td>{{($users->phone)}}</td>
+                                           
+                                           
+                                        </tr>
+                               
+                                    </tbody>
+                                </table>
+                                
+
+                            @else
                                 <!-- <h6 style="text-align: center;color:#eb8153;">Top 10</h6> -->
                                 <table class="table table-bordered table-striped verticle-middle table-responsive-sm">
                                     <thead>
                                         <tr>
                                             <th scope="col">N°</th>
+                                            <th scope="col">Pays</th>
                                             <th scope="col">Nom</th>
                                             <th scope="col">Prenom</th>
                                             <th scope="col">Email</th>
                                             <th scope="col">Contact</th>
-                                            <th scope="col">Pays</th>
+                                        
                                             
                                         </tr>
                                     </thead>
@@ -45,6 +96,7 @@
                                         @foreach($users as $user)
                                         <tr>
                                             <td>{{$i++}}</td>
+                                            <td>{{($user->country)}}</td>
                                             <td>
                                                 {{($user->name)}}
                                             </td>
@@ -53,12 +105,13 @@
                                             </td>
                                             <td>{{($user->email)}}</td>
                                             <td>{{($user->phone)}}</td>
-                                            <td>{{($user->country)}}</td>
+                                           
                                            
                                         </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
+                                @endif
                                 
                             </div>
                         </div>

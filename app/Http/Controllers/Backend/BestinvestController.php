@@ -24,12 +24,33 @@ class BestinvestController extends Controller
         return view('backend.bestinvest',['bestindvestisor'=>$bestindvestisor]);
     }
 
-    public function users(){
+    public function users(Request $request){
+
+
         if(Auth::user()->role != 'admin') return back();
-        $users=DB::table('users')
-        ->selectRaw('name,last_name, email, country,phone')
-        ->orderBy('name', 'asc')
-        ->get();
+
+        if(!isset($request->email))
+        {
+            $users=DB::table('users')
+            ->selectRaw('name,last_name, email, country,phone')
+            ->orderBy('country', 'asc')
+            ->get();
+        }
+
+        else{
+            $users=DB::table('users')
+            ->where('email',$request->email)
+            ->get();
+
+
+            if($users->isEmpty())
+            {
+                session()->flash('alert','Utilisateur inexistant');
+                return back();
+            }
+            return view('backend.users', ['users' => $users[0],'email'=>1]);
+        }
+       
         return view('backend.users', ['users' => $users]);
     }
 }

@@ -34,9 +34,13 @@ Route::group(['namespace'=>'App\Http\Controllers\Backend'],function(){
 Route::get('dashboard','HomeController@index')->name('back.home');
 Route::get('bestinvest','BestinvestController@index')->name('bestinvest');
 Route::get('userinvest','BestinvestController@users')->name('userlist');
+Route::post('userinvest','BestinvestController@users')->name('userlist');
+
 
 Route::get('showmail','SendMailController@show')->name('sendmailshow');
+Route::post('sendmail','SendMailController@sendmail')->name('sendmail');
 Route::get('sendmail','SendMailController@sendmail')->name('sendmail');
+
 
 
 

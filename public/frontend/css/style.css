@@ -395,7 +395,7 @@ li {
 }
 
 .social-icon-one li a:hover {
-    background-color: #ffae00;
+    background-color: #048825;
     color: #ffffff;
 }
 
@@ -437,7 +437,7 @@ li {
 }
 
 .social-icon-two li a:hover {
-    background-color: #ffae00;
+    background-color: #048825;
     color: #ffffff;
 }
 
@@ -483,7 +483,7 @@ li {
 }
 
 .social-icon-three li a:hover {
-    background-color: #ffae00;
+    background-color: #048825;
     color: #ffffff;
 }
 
@@ -654,7 +654,7 @@ Theme Btn
     margin-right: 10px;
     font-size: 20px;
     line-height: 1em;
-    color: #ffae00;
+    color: #048825;
 }
 
 .btn-style-one:before {
@@ -690,9 +690,9 @@ Theme Btn
     background: #001376;
     overflow: hidden;
     min-width: 180px;
-    background: #ffc600;
-    background: -o-linear-gradient(45deg, #ffc600 1%, #ff6c00 100%);
-    background: linear-gradient(45deg, #ffc600 1%, #ff6c00 100%);
+    background: #048825;
+    background: -o-linear-gradient(45deg, #048825 1%, #0718b1 100%);
+    background: linear-gradient(45deg, #048825 1%, #0718b1 100%);
 }
 
 .btn-style-two:hover {
@@ -709,9 +709,9 @@ Theme Btn
     top: 0;
     height: 100%;
     width: 100%;
-    background: #ffc600;
-    background: -o-linear-gradient(135deg, #ffc600 1%, #ff6c00 100%);
-    background: linear-gradient(-45deg, #ffc600 1%, #ff6c00 100%);
+    background: #048825;
+    background: -o-linear-gradient(135deg, #048825 1%, #0718b1 100%);
+    background: linear-gradient(-45deg, #048825 1%, #0718b1 100%);
     content: "";
     opacity: 0;
     -webkit-transition: opacity 200ms ease;
@@ -1032,9 +1032,9 @@ hr {
     color: #1b2032;
     line-height: 30px;
     text-align: center;
-    background: #ffc600;
-    background: -o-linear-gradient(45deg, #ffc600 1%, #ff6c00 100%);
-    background: linear-gradient(45deg, #ffc600 1%, #ff6c00 100%);
+    background: #048825;
+    background: -o-linear-gradient(45deg, #048825 1%, #0718b1 100%);
+    background: linear-gradient(45deg, #048825 1%, #0718b1 100%);
     display: none;
     border-radius: 20px;
     cursor: pointer;
@@ -1058,7 +1058,7 @@ hr {
     width: 80px;
     text-align: center;
     line-height: 80px;
-    background-color: #ffffff;
+    background-color: #058525;
     color: #222222;
     z-index: 1;
     font-size: 42px;
@@ -1432,7 +1432,7 @@ hr {
     top: 7px;
     font-size: 38px;
     line-height: 30px;
-    color: #ffae00;
+    color: #048825;
 }
 
 .contact-list-one li a {
@@ -1453,7 +1453,7 @@ hr {
 }
 
 .nav-toggler:hover {
-    color: #ffae00;
+    color: #048825;
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
@@ -1596,7 +1596,7 @@ hr {
 
 .main-menu .navigation>li.current>a,
 .main-menu .navigation>li>a:hover {
-    color: #ffae00;
+    color: #048825;
 }
 
 .main-menu .navigation>li>a:before {
@@ -1850,7 +1850,7 @@ hr {
     height: 40px;
     width: 40px;
     text-align: center;
-    background: #ffae00;
+    background: #048825;
     border-radius: 50%;
     line-height: 40px;
     font-size: 14px;
@@ -2017,7 +2017,7 @@ hr {
 }
 .main-menu .navigation > li .mega-menu-bar .column > ul > li > a:hover{
     z-index: 1;
-    color: #ffae00;
+    color: #048825;
 }
 
 .main-menu .navigation > li .mega-menu-bar .column > ul > li > a:hover:after{
@@ -2923,7 +2923,7 @@ hr {
     line-height: 25px;
     font-weight: 700;
     margin-right: 3px;
-    color: #ffae00;
+    color: #048825;
 }
 
 .contact-list-two li i {
@@ -2932,7 +2932,7 @@ hr {
     top: 7px;
     font-size: 38px;
     line-height: 30px;
-    color: #ffae00;
+    color: #048825;
 }
 
 .contact-list-two li a {
@@ -3089,7 +3089,7 @@ hr {
     top: 7px;
     font-size: 38px;
     line-height: 30px;
-    color: #ffae00;
+    color: #048825;
 }
 
 .contact-list-four li a {
@@ -3140,10 +3140,10 @@ hr {
     top: 0;
     height: 100%;
     width: 100%;
-    background: #ffc600;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #ffc600), to(#ff6c00));
-    background: -o-linear-gradient(top, #ffc600 1%, #ff6c00 100%);
-    background: linear-gradient(180deg, #ffc600 1%, #ff6c00 100%);
+    background: #048825;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #048825), to(#0718b1));
+    background: -o-linear-gradient(top, #048825 1%, #0718b1 100%);
+    background: linear-gradient(180deg, #048825 1%, #0718b1 100%);
     -webkit-transform: skew(-20deg);
     -ms-transform: skew(-20deg);
     transform: skew(-20deg);
@@ -3625,7 +3625,7 @@ Page Title
 .banner-section .content-box .title {
     display: block;
     font-size: 24px;
-    color: #ffae00;
+    color: #048825;
     font-weight: 700;
     margin-bottom: 15px;
     text-transform: uppercase;
@@ -3899,7 +3899,7 @@ Page Title
     left: 0;
     top: 0;
     font-size: 24px;
-    color: #ffae00;
+    color: #048825;
     line-height: 50px;
 }
 
@@ -4005,7 +4005,7 @@ a.ui-button:active,
 .time-counter-one h6 {
     position: relative;
     font-size: 18px;
-    color: #ffae00;
+    color: #048825;
     font-weight: 400;
     margin-bottom: 20px;
     text-align: center;
@@ -4113,7 +4113,7 @@ a.ui-button:active,
 .banner-section-two .content-box .title {
     display: block;
     font-size: 24px;
-    color: #ffae00;
+    color: #048825;
     font-weight: 700;
     margin-bottom: 25px;
 }
@@ -4161,7 +4161,7 @@ a.ui-button:active,
     top: 7px;
     font-size: 38px;
     line-height: 30px;
-    color: #ffae00;
+    color: #048825;
 }
 
 .info-list-two li a {
@@ -4368,7 +4368,7 @@ a.ui-button:active,
 
 .about-section .image-3 {
     position: absolute;
-    border: 30px solid #ffae00;
+    border: 30px solid #048825;
     top: 0;
     left: -50px;
     z-index: 2;
@@ -4564,17 +4564,17 @@ a.ui-button:active,
     width: 40px;
     margin-left: -20px;
     height: 2px;
-    background: #ffae00;
+    background: #048825;
     content: "";
 }
 
 .date-box-one.bg_yellow {
     margin-top: 70px;
     margin-left: -30px;
-    background: #ffc600;
-    background: -webkit-gradient(linear, left top, right top, color-stop(1%, #ffc600), to(#ff6c00));
-    background: -o-linear-gradient(left, #ffc600 1%, #ff6c00 100%);
-    background: linear-gradient(90deg, #ffc600 1%, #ff6c00 100%);
+    background: #048825;
+    background: -webkit-gradient(linear, left top, right top, color-stop(1%, #048825), to(#0718b1));
+    background: -o-linear-gradient(left, #048825 1%, #0718b1 100%);
+    background: linear-gradient(90deg, #048825 1%, #0718b1 100%);
 }
 
 .date-box-one.bg_yellow .month,
@@ -4743,7 +4743,7 @@ a.ui-button:active,
 .info-box-one h4 {
     font-size: 30px;
     line-height: 36px;
-    color: #ffae00;
+    color: #048825;
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -5149,7 +5149,7 @@ a.ui-button:active,
 }
 
 .feature-block-two:hover h4 {
-    color: #ffae00;
+    color: #048825;
 }
 
 .feature-block-two:hover .icon-box .icon,
@@ -5221,7 +5221,7 @@ a.ui-button:active,
 
 .feature-block-three h4 {
     font-size: 22px;
-    color: #ffae00;
+    color: #048825;
     font-weight: 700;
     margin-bottom: 14px;
 }
@@ -5314,7 +5314,7 @@ a.ui-button:active,
 
 .feature-block-five h4 {
     font-size: 24px;
-    color: #ffae00;
+    color: #048825;
     font-weight: 700;
     padding-top: 40px;
     margin-top: 40px;
@@ -5355,9 +5355,9 @@ a.ui-button:active,
 }
 
 .feature-block-five .inner-box:hover .theme-btn {
-    background: #ffc600;
-    background: -o-linear-gradient(45deg, #ffc600 1%, #ff6c00 100%);
-    background: linear-gradient(45deg, #ffc600 1%, #ff6c00 100%);
+    background: #048825;
+    background: -o-linear-gradient(45deg, #048825 1%, #0718b1 100%);
+    background: linear-gradient(45deg, #048825 1%, #0718b1 100%);
 }
 
 .feature-block-five .inner-box:hover {
@@ -8645,9 +8645,9 @@ Accordian Box
     z-index: 1;
     font-size: 16px;
     color: #fdfdfd;
-    background: #ffc600;
-    background: -o-linear-gradient(45deg, #ffc600 1%, #ff6c00 100%);
-    background: linear-gradient(45deg, #ffc600 1%, #ff6c00 100%);
+    background: #048825;
+    background: -o-linear-gradient(45deg, #048825 1%, #0718b1 100%);
+    background: linear-gradient(45deg, #048825 1%, #0718b1 100%);
     padding: 5px 20px;
     font-weight: 600;
     color: #ffffff;
@@ -9782,9 +9782,9 @@ Accordian Box
     top: 20px;
     right: 20px;
     bottom: 20px;
-    background: #ffc600;
-    background: -o-linear-gradient(45deg, #ffc600 1%, #ff6c00 100%);
-    background: linear-gradient(45deg, #ffc600 1%, #ff6c00 100%);
+    background: #048825;
+    background: -o-linear-gradient(45deg, #048825 1%, #0718b1 100%);
+    background: linear-gradient(45deg, #048825 1%, #0718b1 100%);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -9986,8 +9986,8 @@ Accordian Box
 .styled-pagination li.next-post a:hover,
 .styled-pagination li.prev-post a:hover {
     color: #ffffff;
-    background: #ffae00;
-    border-color: #ffae00;
+    background: #048825;
+    border-color: #048825;
 }
 
 
@@ -10802,7 +10802,7 @@ Accordian Box
     top: 0;
     height: 100%;
     width: 100%;
-    background: #ffc600 padding-box content-box;
+    background: #048825 padding-box content-box;
     padding: 5px;
     opacity: .80;
     content: "";
@@ -10878,10 +10878,10 @@ Accordian Box
     width: 1000%;
     height: 100%;
     border-radius: 50px;
-    background: #ffc600;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #ffc600), to(#ff6c00));
-    background: -o-linear-gradient(top, #ffc600 1%, #ff6c00 100%);
-    background: linear-gradient(180deg, #ffc600 1%, #ff6c00 100%);
+    background: #048825;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #048825), to(#0718b1));
+    background: -o-linear-gradient(top, #048825 1%, #0718b1 100%);
+    background: linear-gradient(180deg, #048825 1%, #0718b1 100%);
     content: "";
 }
 

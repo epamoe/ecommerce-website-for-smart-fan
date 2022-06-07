@@ -24,7 +24,7 @@
 	
 </head>
 <body>
-
+@include('flashMessage')
     <!--*******************
         Preloader start
     ********************-->

@@ -18,9 +18,9 @@
                     <span class="nav-text">Dashboard</span>
                 </a>
             </li>
-            <li><a class="ai-icon" href="javascript:void()" aria-expanded="false">
+            <li><a class="ai-icon" href="{{route('bestinvest')}}" aria-expanded="false">
                     <i class="flaticon-077-menu-1"></i>
-                    <span class="nav-text">Actualités</span>
+                    <span class="nav-text">Investisseurs</span>
                 </a>
             </li>
             <li class="nav-label">onglets</li>
@@ -45,7 +45,7 @@
             <li>
                 <a class="ai-icon" href="{{route('sendmailshow')}}" aria-expanded="false">
                     <i class="flaticon-077-menu-1"></i>
-                    <span class="nav-text">Email</span>
+                    <span class="nav-text">Diffusions de mail</span>
                 </a>
             </li>
             <?php } ?>
