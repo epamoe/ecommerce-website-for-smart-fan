@@ -42,6 +42,12 @@
                     <span class="nav-text">Utilisateurs</span>
                 </a>
             </li>
+            <li>
+                <a class="ai-icon" href="{{route('sendmailshow')}}" aria-expanded="false">
+                    <i class="flaticon-077-menu-1"></i>
+                    <span class="nav-text">Email</span>
+                </a>
+            </li>
             <?php } ?>
 
             <!-- <li><a class="ai-icon" href="javascript:void()" aria-expanded="false">

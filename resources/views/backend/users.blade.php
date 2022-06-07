@@ -34,7 +34,9 @@
                                             <th scope="col">Nom</th>
                                             <th scope="col">Prenom</th>
                                             <th scope="col">Email</th>
-                                            <th scope="col">Nombre de parts</th>
+                                            <th scope="col">Contact</th>
+                                            <th scope="col">Pays</th>
+                                            
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -50,7 +52,9 @@
                                                 {{($user->last_name)}}
                                             </td>
                                             <td>{{($user->email)}}</td>
-                                            <td>{{($user->nbr_share)}}</td>
+                                            <td>{{($user->phone)}}</td>
+                                            <td>{{($user->country)}}</td>
+                                           
                                         </tr>
                                         @endforeach
                                     </tbody>

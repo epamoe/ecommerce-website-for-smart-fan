@@ -26,8 +26,8 @@ class BestinvestController extends Controller
 
     public function users(){
         if(Auth::user()->role != 'admin') return back();
-        $users=DB::table('payments')
-        ->selectRaw('name,last_name, email, nbr_share')
+        $users=DB::table('users')
+        ->selectRaw('name,last_name, email, country,phone')
         ->orderBy('name', 'asc')
         ->get();
         return view('backend.users', ['users' => $users]);

@@ -35,6 +35,11 @@ Route::get('dashboard','HomeController@index')->name('back.home');
 Route::get('bestinvest','BestinvestController@index')->name('bestinvest');
 Route::get('userinvest','BestinvestController@users')->name('userlist');
 
+Route::get('showmail','SendMailController@show')->name('sendmailshow');
+Route::get('sendmail','SendMailController@sendmail')->name('sendmail');
+
+
+
 
 });
 
