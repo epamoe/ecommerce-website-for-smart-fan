@@ -24,13 +24,41 @@
     <div class="col-xl-12 col-xx-8">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Liste des utilisateurs  </h4>
-                            <div class="form-outline">
-
-                            <form action="" method="post" action="{{route('userlist')}}">
+                            <h4 class="card-title">  <form action=""  method="post" action="{{route('userlist')}}">
                                 @csrf
-    <input type="search" name="email" class="form-control"  placeholder="Entrez un email"  />  <button class="btn btn-warning d-flex justify-content-center"> valider</button>
-    </form>
+
+
+                                <select name="filtre" class="form-control"  id=""  >
+
+
+<option value=""> Choisissez une option (Filtre)</option>
+<option value="DEC">   Meilleurs investisseurs(décroissant)</option>
+<option value="CRO">   Meilleurs investisseurs(croissant)</option>
+<option value="ALP">   Ordre alphabetique</option>
+
+</select>
+<hr>
+
+
+
+    <input type="search" name="email" class="form-control"  placeholder="Entrez un email"  /> 
+    
+    
+    
+    
+    <br>  <button class="btn btn-warning d-flex justify-content-center"> valider</button>
+    
+
+
+
+</form></h4>
+                            <div class="">
+
+                   
+
+                            
+
+                           
 
    
   </div>
@@ -38,11 +66,12 @@
                         <div class="card-body">
                             <div class="table-responsive">
 
-                            @if(isset($email))
+                            @if(isset($email) && $email==1)
                             <table class="table table-bordered table-striped verticle-middle table-responsive-sm">
                                     <thead>
                                         <tr>
-                                           
+                                        <th scope="col">Parts</th>
+                                        <th scope="col">Investis</th>
                                             <th scope="col">Pays</th>
                                             <th scope="col">Nom</th>
                                             <th scope="col">Prenom</th>
@@ -57,6 +86,10 @@
                                 
                                        
                                         <tr>
+                                        <td>
+                                                {{($users->nbr_share)}}
+                                            </td>
+                                            <td>{{($users->montant_investit)}}</td>
                           
                                             <td>{{($users->country)}}</td>
                                             <td>
@@ -75,7 +108,8 @@
                                 </table>
                                 
 
-                            @else
+                            @endif
+                            @if(isset($email) && $email==0)
                                 <!-- <h6 style="text-align: center;color:#eb8153;">Top 10</h6> -->
                                 <table class="table table-bordered table-striped verticle-middle table-responsive-sm">
                                     <thead>
@@ -84,6 +118,8 @@
                                             <th scope="col">Pays</th>
                                             <th scope="col">Nom</th>
                                             <th scope="col">Prenom</th>
+                                            <th scope="col">Parts</th>
+                                        <th scope="col">Investis</th>
                                             <th scope="col">Email</th>
                                             <th scope="col">Contact</th>
                                         
@@ -103,6 +139,10 @@
                                             <td>
                                                 {{($user->last_name)}}
                                             </td>
+                                            <td>
+                                                {{($user->nbr_share)}}
+                                            </td>
+                                            <td>{{($user->montant_investit)}}</td>
                                             <td>{{($user->email)}}</td>
                                             <td>{{($user->phone)}}</td>
                                            
@@ -112,6 +152,75 @@
                                     </tbody>
                                 </table>
                                 @endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                @if(isset($bestindvestisor))
+
+                                <table class="table table-bordered table-striped verticle-middle table-responsive-sm">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">N°</th>
+                                            <th scope="col">PARTS </th>
+                                            <th scope="col">MONTANT</th>
+                                            <th scope="col">NOM</th>
+                                            <th scope="col">PRENOM</th>
+                                            <th scope="col">EMAIL</th>
+                                            <th scope="col">PHONE</th>
+                                            <th scope="col">PAYS</th>
+
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    <?php   $i=1 ?>
+                                        @foreach($bestindvestisor as $best)
+                                        <tr>
+                                            <td>{{$i++}}</td>
+                                            <td>
+                                                {{($best->nbr_share)}}
+                                            </td>
+                                            <td>{{($best->montant_investit)}}</td>
+                                            <td>{{($best->name)}}</td>
+                                            <td>{{($best->last_name)}}</td>
+                                            <td>{{($best->email)}}</td>
+                                            <td>{{($best->phone)}}</td>
+                                            <td>{{($best->country)}}</td>
+
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            @endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                 
                             </div>
                         </div>
