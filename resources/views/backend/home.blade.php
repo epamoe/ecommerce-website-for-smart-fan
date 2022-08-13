@@ -22,8 +22,7 @@
                 <div class="card-body text-center">
                    
                     <span style="color: orange;">Mes parts</span>
-                    <h2 class="text-black mb-2 font-w600 pt-4">{{($mes_parts[0]->nbr_share)}}</h2>
-
+                    <h2 class="text-black mb-2 font-w600 pt-4">{{($mes_parts[0]->nbr_share+$mes_parts[0]->bonus)}}</h2>
                 </div>
             </div>
         </div>

@@ -19,7 +19,7 @@
                 </a>
             </li>
             <li><a class="ai-icon" href="{{route('bestinvest')}}" aria-expanded="false">
-                    <i class="flaticon-077-menu-1"></i>
+                    <i class="flaticon-381-user-4"></i>
                     <span class="nav-text">Investisseurs</span>
                 </a>
             </li>
@@ -38,26 +38,29 @@
             <li class="nav-label">Administration</li>
             <li>
                 <a class="ai-icon" href="{{route('userlist')}}" aria-expanded="false">
-                    <i class="flaticon-077-menu-1"></i>
+                    <i class="flaticon-381-user-9"></i>
                     <span class="nav-text">Utilisateurs</span>
                 </a>
             </li>
             <li>
                 <a class="ai-icon" href="{{route('sendmailshow')}}" aria-expanded="false">
-                    <i class="flaticon-077-menu-1"></i>
+                    <i class="flaticon-381-send-2"></i>
                     <span class="nav-text">Diffusions de mail</span>
                 </a>
             </li>
             <?php } ?>
+            <li>
+                <a class="ai-icon" href="{{route('showcertificat')}}" aria-expanded="false" target="new">
+                    <i class="flaticon-381-file-2"></i>
+                    <span class="nav-text">Certificat</span>
+                </a>
+            </li>
 
             <!-- <li><a class="ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-network"></i>
                     <span class="nav-text">Transactions</span>
                 </a>
             </li> -->
-          
-            
-            
         </ul>
         <!-- <div class="copyright">
             <p><strong>TAGUSDRONE</strong> © 2022 All Rights Reserved</p>

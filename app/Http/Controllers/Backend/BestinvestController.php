@@ -38,22 +38,14 @@ class BestinvestController extends Controller
             return back();
         }
 
-
-
-
-
-
-
-
         if(isset($request->filtre))
         {
 
-
             if($request->filtre == 'DEC')
-{            
+        {            
         $bestindvestisor=DB::table('payments')
         ->join('users','users.id','payments.id_user')
-        ->selectRaw('payments.montant_investit,payments.nbr_share,payments.pk,payments.name,payments.last_name,payments.email,users.country,users.phone')
+        ->selectRaw('payments.montant_investit,payments.nbr_share,payments.pk,payments.name,payments.last_name,payments.email,users.country,users.phone,payments.bonus')
         ->orderBy('nbr_share','desc')
         ->get();}
 
@@ -62,14 +54,14 @@ class BestinvestController extends Controller
         {            
                 $bestindvestisor=DB::table('payments')
                 ->join('users','users.id','payments.id_user')
-                ->selectRaw('payments.montant_investit,payments.nbr_share,payments.pk,payments.name,payments.last_name,payments.email,users.country,users.phone')
+                ->selectRaw('payments.montant_investit,payments.nbr_share,payments.pk,payments.name,payments.last_name,payments.email,users.country,users.phone,payments.bonus')
                 ->orderBy('nbr_share','ASC')
                 ->get();}
                 if($request->filtre == 'ALP')
                 {            
                         $bestindvestisor=DB::table('payments')
                         ->join('users','users.id','payments.id_user')
-                       ->selectRaw('payments.montant_investit,payments.nbr_share,payments.pk,payments.name,payments.last_name,payments.email,users.country,users.phone')
+                       ->selectRaw('payments.montant_investit,payments.nbr_share,payments.pk,payments.name,payments.last_name,payments.email,users.country,users.phone,payments.bonus')
                         ->orderBy('name','asc')
                         ->get();
                 }
@@ -84,7 +76,7 @@ class BestinvestController extends Controller
         {
             $users=DB::table('payments')
             ->join('users','users.id','payments.id_user')
-            ->selectRaw('payments.montant_investit,payments.nbr_share,payments.pk,payments.name,payments.last_name,payments.email,users.country,users.phone')
+            ->selectRaw('payments.montant_investit,payments.nbr_share,payments.pk,payments.name,payments.last_name,payments.email,users.country,users.phone,payments.bonus')
             ->orderBy('country','ASC')
             ->get();
             
@@ -95,7 +87,7 @@ class BestinvestController extends Controller
             $users=DB::table('payments')
             ->join('users','users.id','payments.id_user')
             ->where('payments.email',$request->email)
-            ->selectRaw('payments.montant_investit,payments.nbr_share,payments.pk,payments.name,payments.last_name,payments.email,users.country,users.phone')
+            ->selectRaw('payments.montant_investit,payments.nbr_share,payments.pk,payments.name,payments.last_name,payments.email,users.country,users.phone,payments.bonus')
             ->get();
 
 
@@ -111,5 +103,34 @@ class BestinvestController extends Controller
 
        
         return view('backend.users', ['users' => $users,'email'=>0]);
+    }
+
+    public function addBonus(Request $request){
+
+        $oldbonus=DB::table('payments')->where('pk',$request->pk)->selectRaw('bonus')->get();
+
+        DB::table('payments')
+        ->where('pk',$request->pk)
+        ->update([
+            "bonus"=>$oldbonus[0]->bonus+$request->bonus,
+            "bonustampon"=>$request->bonus
+        ]);
+
+        return back();
+    }
+
+
+    public function delete(Request $request){
+
+       $oldbonus=DB::table('payments')->where('pk',$request->pk)->selectRaw('bonus,bonustampon')->get();
+
+        DB::table('payments')
+        ->where('pk',$request->pk)
+        ->update([
+            "bonus"=>$oldbonus[0]->bonus-$oldbonus[0]->bonustampon,
+            "bonustampon"=>0
+        ]);
+
+        return back();
     }
 }

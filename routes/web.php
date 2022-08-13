@@ -36,10 +36,18 @@ Route::get('bestinvest','BestinvestController@index')->name('bestinvest');
 Route::get('userinvest','BestinvestController@users')->name('userlist');
 Route::post('userinvest','BestinvestController@users')->name('userlist');
 
+Route::get('addbonus','BestinvestController@addBonus')->name('bonus');
+Route::post('addbonus','BestinvestController@addBonus')->name('bonus');
+
+Route::get('deleted','BestinvestController@delete')->name('remove');
+Route::post('deleted','BestinvestController@delete')->name('remove');
+
 
 Route::get('showmail','SendMailController@show')->name('sendmailshow');
 Route::post('sendmail','SendMailController@sendmail')->name('sendmail');
 Route::get('sendmail','SendMailController@sendmail')->name('sendmail');
+
+
 
 
 
@@ -58,3 +66,7 @@ Route::post('/profile','App\Http\Controllers\Backend\Profil\ProfilController@ind
 Route::get('/profile','App\Http\Controllers\Backend\Profil\ProfilController@index')->name('findprofile');
 
 Route::post('/profile-setting','App\Http\Controllers\Profile\ProfileController@edit')->name('editprofile');
+
+/* certificat on a tapé la commande composer require mpdf/mpdf pr la bibliothèque*/
+Route::get('/contrat','App\Http\Controllers\Backend\Contrat\ContratController@mycontrat')->name('showcertificat');
+Route::post('/contrat','App\Http\Controllers\Backend\Contrat\ContratController@mycontrat')->name('showcertificat');

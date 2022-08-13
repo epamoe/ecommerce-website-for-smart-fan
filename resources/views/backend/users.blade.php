@@ -14,144 +14,47 @@
         </div> -->
         <!-- <a href="javascript:void(0);" class="btn btn-secondary mb-2"><i class="las la-calendar scale5 mr-3"></i>STATISTIQUES</a> -->
 
-    
+
     </div>
-    
 
 
-   
+
+
     <div class="row">
-    <div class="col-xl-12 col-xx-8">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title">  <form action=""  method="post" action="{{route('userlist')}}">
-                                @csrf
+        <div class="col-xl-12 col-xx-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">
+                        <form method="post" action="{{route('userlist')}}">
+                            @csrf
 
 
-                                <select name="filtre" class="form-control"  id=""  >
+                            <select name="filtre" class="form-control" id="">
 
 
-<option value=""> Choisissez une option (Filtre)</option>
-<option value="DEC">   Meilleurs investisseurs(décroissant)</option>
-<option value="CRO">   Meilleurs investisseurs(croissant)</option>
-<option value="ALP">   Ordre alphabetique</option>
+                                <option value=""> Choisissez une option (Filtre)</option>
+                                <option value="DEC"> Meilleurs investisseurs(décroissant)</option>
+                                <option value="CRO"> Meilleurs investisseurs(croissant)</option>
+                                <option value="ALP"> Ordre alphabetique</option>
 
-</select>
-<hr>
-
-
-
-    <input type="search" name="email" class="form-control"  placeholder="Entrez un email"  /> 
-    
-    
-    
-    
-    <br>  <button class="btn btn-warning d-flex justify-content-center"> valider</button>
-    
+                            </select>
+                            <hr>
 
 
 
-</form></h4>
-                            <div class="">
+                            <input type="search" name="email" class="form-control" placeholder="Entrez un email" />
 
-                   
 
-                            
 
-                           
 
-   
-  </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
+                            <br> <button class="btn btn-warning d-flex justify-content-center"> valider</button>
 
-                            @if(isset($email) && $email==1)
-                            <table class="table table-bordered table-striped verticle-middle table-responsive-sm">
-                                    <thead>
-                                        <tr>
-                                        <th scope="col">Parts</th>
-                                        <th scope="col">Investis</th>
-                                            <th scope="col">Pays</th>
-                                            <th scope="col">Nom</th>
-                                            <th scope="col">Prenom</th>
-                                            <th scope="col">Email</th>
-                                            <th scope="col">Contact</th>
-                                        
-                                            
-                                        </tr>
-                                    </thead>
-                                    <tbody>
 
-                                
-                                       
-                                        <tr>
-                                        <td>
-                                                {{($users->nbr_share)}}
-                                            </td>
-                                            <td>{{($users->montant_investit)}}</td>
-                          
-                                            <td>{{($users->country)}}</td>
-                                            <td>
-                                                {{($users->name)}}
-                                            </td>
-                                            <td>
-                                                {{($users->last_name)}}
-                                            </td>
-                                            <td>{{($users->email)}}</td>
-                                            <td>{{($users->phone)}}</td>
-                                           
-                                           
-                                        </tr>
-                               
-                                    </tbody>
-                                </table>
-                                
 
-                            @endif
-                            @if(isset($email) && $email==0)
-                                <!-- <h6 style="text-align: center;color:#eb8153;">Top 10</h6> -->
-                                <table class="table table-bordered table-striped verticle-middle table-responsive-sm">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">N°</th>
-                                            <th scope="col">Pays</th>
-                                            <th scope="col">Nom</th>
-                                            <th scope="col">Prenom</th>
-                                            <th scope="col">Parts</th>
-                                        <th scope="col">Investis</th>
-                                            <th scope="col">Email</th>
-                                            <th scope="col">Contact</th>
-                                        
-                                            
-                                        </tr>
-                                    </thead>
-                                    <tbody>
 
-                                    <?php   $i=1 ?>
-                                        @foreach($users as $user)
-                                        <tr>
-                                            <td>{{$i++}}</td>
-                                            <td>{{($user->country)}}</td>
-                                            <td>
-                                                {{($user->name)}}
-                                            </td>
-                                            <td>
-                                                {{($user->last_name)}}
-                                            </td>
-                                            <td>
-                                                {{($user->nbr_share)}}
-                                            </td>
-                                            <td>{{($user->montant_investit)}}</td>
-                                            <td>{{($user->email)}}</td>
-                                            <td>{{($user->phone)}}</td>
-                                           
-                                           
-                                        </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
-                                @endif
+                        </form>
+                    </h4>
+                    <div class="">
 
 
 
@@ -160,73 +63,287 @@
 
 
 
-
-
-
-
-
-
-
-
-                                @if(isset($bestindvestisor))
-
-                                <table class="table table-bordered table-striped verticle-middle table-responsive-sm">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">N°</th>
-                                            <th scope="col">PARTS </th>
-                                            <th scope="col">MONTANT</th>
-                                            <th scope="col">NOM</th>
-                                            <th scope="col">PRENOM</th>
-                                            <th scope="col">EMAIL</th>
-                                            <th scope="col">PHONE</th>
-                                            <th scope="col">PAYS</th>
-
-
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-
-                                    <?php   $i=1 ?>
-                                        @foreach($bestindvestisor as $best)
-                                        <tr>
-                                            <td>{{$i++}}</td>
-                                            <td>
-                                                {{($best->nbr_share)}}
-                                            </td>
-                                            <td>{{($best->montant_investit)}}</td>
-                                            <td>{{($best->name)}}</td>
-                                            <td>{{($best->last_name)}}</td>
-                                            <td>{{($best->email)}}</td>
-                                            <td>{{($best->phone)}}</td>
-                                            <td>{{($best->country)}}</td>
-
-                                        </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
-                            @endif
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                
-                            </div>
-                        </div>
                     </div>
                 </div>
-      
+                <div class="card-body">
+                    <div class="table-responsive">
+
+                        @if(isset($email) && $email==1)
+                        <table class="table table-bordered table-striped verticle-middle table-responsive-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Parts</th>
+                                    <th scope="col">Bonus</th>
+                                    <th scope="col">Investis</th>
+                                    <th scope="col">Pays</th>
+                                    <th scope="col">Nom</th>
+                                    <th scope="col">Prenom</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Contact</th>
+                                    <th scope="col">Action</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+
+
+                                <tr>
+                                    <td>
+                                        {{($users->nbr_share)}}
+                                    </td>
+                                    <td>{{($users->bonus)}}</td>
+
+                                    <td>{{($users->montant_investit)}}</td>
+
+                                    <td>{{($users->country)}}</td>
+                                    <td>
+                                        {{($users->name)}}
+                                    </td>
+                                    <td>
+                                        {{($users->last_name)}}
+                                    </td>
+                                    <td>{{($users->email)}}</td>
+                                    <td>{{($users->phone)}}</td>
+                                    <td><a href="#" data-toggle="modal" data-target="#Modals{{($users->pk)}}"><i class="flaticon-381-edit-1"></i></a></td>
+                                </tr>
+                                <div class="modal fade" id="Modals{{($users->pk)}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Ajoutez votre Bonus</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <form action="{{route('bonus',['pk'=>$users->pk])}}" method="post">
+                                                @csrf
+                                                <div class="modal-body">
+
+                                                    <div class="form-group">
+                                                        <label for="recipient-name" class="col-form-label">bonus</label>
+                                                        <input type="number" name="bonus" class="form-control" id="recipient-name">
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                                    <button type="submit" class="btn btn-primary">Valider</button>
+                                                    <!-- <button class="btn btn-primary" type="submit" >Valider </button> -->
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- delete -->
+                                <!-- Button trigger modal -->
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="modals{{($users->pk)}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <form action="{{route('bonus',['pk'=>$users->pk])}}" method="POST">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Suppression</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Voulez vous vraiment supprimer les derniers bonus ajoutés?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Non</button>
+                                                    <button type="submit" class="btn btn-primary">Oui</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </tbody>
+                        </table>
+
+
+                        @endif
+                        @if(isset($email) && $email==0)
+                        <!-- <h6 style="text-align: center;color:#eb8153;">Top 10</h6> -->
+                        <table class="table table-bordered table-striped verticle-middle table-responsive-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col">N°</th>
+                                    <th scope="col">Pays</th>
+                                    <th scope="col">Nom</th>
+                                    <th scope="col">Prenom</th>
+                                    <th scope="col">Parts</th>
+                                    <th scope="col">Bonus</th>
+                                    <th scope="col">Investis</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Contact</th>
+                                    <th scope="col">Action</th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <?php $i = 1 ?>
+                                @foreach($users as $user)
+
+                                <tr>
+                                    <td>{{$i++}}</td>
+                                    <td>{{($user->country)}}</td>
+                                    <td>
+                                        {{($user->name)}}
+                                    </td>
+                                    <td>
+                                        {{($user->last_name)}}
+                                    </td>
+                                    <td>
+                                        {{($user->nbr_share)}}
+                                    </td>
+                                    <td>{{($user->bonus)}}</td>
+                                    <td>{{($user->montant_investit)}}</td>
+                                    <td>{{($user->email)}}</td>
+                                    <td>{{($user->phone)}}</td>
+                                    <td><a href="#" data-toggle="modal" data-target="#Modal{{($user->pk)}}"><i class="flaticon-381-edit-1"></i></a><br> <a href="#" data-toggle="modal" data-target="#modal{{($user->pk)}}"><i class="flaticon-381-trash-1"></i></a></td>
+
+                                </tr>
+
+                                <div class="modal fade" id="Modal{{($user->pk)}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Ajoutez votre Bonus</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <form action="{{route('bonus',['pk'=>$user->pk])}}" method="post">
+                                                @csrf
+                                                <div class="modal-body">
+
+                                                    <div class="form-group">
+                                                        <label for="recipient-name" class="col-form-label">bonus</label>
+                                                        <input type="number" name="bonus" class="form-control" id="recipient-name">
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                                    <button type="submit" class="btn btn-primary">Valider</button>
+                                                    <!-- <button class="btn btn-primary" type="submit" >Valider </button> -->
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="modal{{($user->pk)}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <form action="{{route('remove',['pk'=>$user->pk])}}" method="POST">
+                                                @csrf
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Suppression</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Voulez vous vraiment supprimer les derniers bonus ajoutés?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Non</button>
+                                                    <button type="submit" class="btn btn-primary">Oui</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endforeach
+                            </tbody>
+                        </table>
+                        @endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        @if(isset($bestindvestisor))
+
+                        <table class="table table-bordered table-striped verticle-middle table-responsive-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col">N°</th>
+                                    <th scope="col">PARTS </th>
+                                    <th scope="col">MONTANT</th>
+                                    <th scope="col">NOM</th>
+                                    <th scope="col">PRENOM</th>
+                                    <th scope="col">EMAIL</th>
+                                    <th scope="col">PHONE</th>
+                                    <th scope="col">PAYS</th>
+
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <?php $i = 1 ?>
+                                @foreach($bestindvestisor as $best)
+                                <tr>
+                                    <td>{{$i++}}</td>
+                                    <td>
+                                        {{($best->nbr_share)}}
+                                    </td>
+                                    <td>{{($best->montant_investit)}}</td>
+                                    <td>{{($best->name)}}</td>
+                                    <td>{{($best->last_name)}}</td>
+                                    <td>{{($best->email)}}</td>
+                                    <td>{{($best->phone)}}</td>
+                                    <td>{{($best->country)}}</td>
+
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                        @endif
+
+                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <div class="row">
         <!-- <div class="col-xl-6 col-xxl-12">
