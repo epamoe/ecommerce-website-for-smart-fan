@@ -21,7 +21,7 @@ class ContratController extends Controller
       ->where('users.id',Auth::id())
       ->selectRaw('users.name,users.last_name,users.email,users.country,users.pk,payments.nbr_share,payments.nbr_share,payments.montant_investit')
       ->get();
-      //dd($toto);
+      // dd($toto,round(((20000+20000*0.04)/530), 2));
     // die(var_dump(Auth::id(),$toto[0]->name,$toto[0]->nbr_share,Auth::user()->last_name,Auth::user()->country,Auth::user()->email));
       $mpdf = new Mpdf();
 
@@ -31,7 +31,7 @@ class ContratController extends Controller
 
       $mpdf->WriteHTML("  <h1 style='color:blue;'>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp; <span style='text-decoration: none;'>   Contrat de souscription  </span> </h1>   Le présent contrat est signé et prend effet à compter du  <b>  " . date('Y-m-d ') . " </b> <br><br>  
         ENTRE : <br><br>
-        <b>&nbsp;&nbsp;&nbsp;&nbsp; PREVO SARL </b>(l’entreprise), une société a responsabilité limité
+        <b>&nbsp;&nbsp;&nbsp;&nbsp; SMART FAN TECHNOLOGY </b>(l’entreprise), une société a responsabilité limité
         (SARL) dont le siège social est au Cameroun,Yaoundé <br><br>
            Et :<br><br> <b>&nbsp;&nbsp;&nbsp;</b> <b> " .$toto[0]->name . " " . $toto[0]->last_name . " </b> (L’acheteur),
      résidant en/au " .  $toto[0]->country . "  et d’adresse mail    <b> " .  $toto[0]->email . "  </b>   <br><br>
