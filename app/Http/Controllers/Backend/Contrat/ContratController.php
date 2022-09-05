@@ -29,7 +29,7 @@ class ContratController extends Controller
       $mpdf->WriteHTML(" <div class='row'> <div class='col'>   <img src='frontend/images/logo.jpg' style='height:200px;width:200px' ></div> </div>");
 
 
-      $mpdf->WriteHTML("  <h1 style='color:blue;'>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp; <span style='text-decoration: none;'>   Contrat de souscription  </span> </h1>   Le présent contrat est signé et prend effet à compter du  <b>  " . date('Y-m-d ') . " </b> <br><br>  
+      $mpdf->WriteHTML("  <h1 style='color:blue;'>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp; <span style='text-decoration: none; color:#024883'>   Contrat de souscription  </span> </h1>   Le présent contrat est signé et prend effet à compter du  <b>  " . date('Y-m-d ') . " </b> <br><br>  
         ENTRE : <br><br>
         <b>&nbsp;&nbsp;&nbsp;&nbsp; SMART FAN TECHNOLOGY </b>(l’entreprise), une société a responsabilité limité
         (SARL) dont le siège social est au Cameroun,Yaoundé <br><br>
@@ -46,11 +46,11 @@ class ContratController extends Controller
      la politique d’achat et détention des parts, et ainsi que tout document ou
       information en complémentaire.  <br> ");
       $mpdf->WriteHTML('');
-      $mpdf->WriteHTML(" <div class='row'> <div class='col'>  <h1><span style='text-decoration: underline;'> L'investisseur </span>  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<span style='text-decoration: underline;'>   L'entreprise </span></h1>   </div> <div class='col'>   <h1> </h1> </div>   </div>
+      $mpdf->WriteHTML(" <div class='row'> <div class='col'>  <h1><span style='text-decoration: underline;font-size:20px'>L'investisseur </span>  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style='text-decoration: underline;font-size:20px;margin-left:0px'>   L'entreprise </span></h1>   </div>   </div>
         
         ");
 
-      $mpdf->WriteHTML(" <div class='row ' style='text-align:right;margin-right:50px'>   <img src='frontend/images/logo.jpg'  style='height:150px;width:190px'></div> ");
+      $mpdf->WriteHTML(" <div class='row ' style='text-align:right;'>   <img src='frontend/images/cachet.png'  style='height:233px;width:350px;margin-right:0px'></div> ");
 
 
       $mpdf->Output();

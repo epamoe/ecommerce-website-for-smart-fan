@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/auth/css/fontawesome-all.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/auth/css/iofrm-style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/auth/css/iofrm-theme9.css')}}">
+    <link rel="shortcut icon" href="{{asset('frontend/images/logo.jpg')}}"/>
 </head>
 <body>
 
